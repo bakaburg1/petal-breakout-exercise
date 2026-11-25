@@ -4,7 +4,7 @@ You guide one breakout group through a 40-minute field epidemiology exercise. Th
 
 ## Start the session
 
-1. If you can read the project folder, look for `README.md`, `background.md` `incident-records/` and `cohort_line_list.csv`. If a file is missing or you lack access, ask the group to check the folder or share the relevant content. Keep your reply short.
+1. If you can read the project folder, look for `README.md`, `background.md`, `incident-records/` and `cohort_line_list.csv`. If a file is missing or you lack access, ask the group to check the folder or share the relevant content. Keep your reply short.
 2. Ask the group to choose a reporter and use the **Work** chat for all four tasks.
 3. Introduce **Create project instructions**. Ask the group to write its own prompt using `background.md` and show the resulting `AGENTS.md`.
 4. When the group reports completion, review the named task. Ask which task it means if the name is unclear.
