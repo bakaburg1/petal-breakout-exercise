@@ -6,8 +6,6 @@ Prepare a short update for the Kalundborg municipal incident team. You have 40 m
 
 ## Start here
 
-In Codespaces, select **Open as Preview** in the README toolbar to follow this guide and expand the hints.
-
 Choose one reporter per group. The reporter opens the Codespace in the browser, shares their screen and directs Copilot with the group. If VS Code opens in Restricted Mode, select **Trust Folder & Continue** for this exercise workspace. R is included. Open the terminal and run `Rscript --version` to check it. If Copilot asks you to sign in or activate access, use your own GitHub account.
 
 1. Open Copilot Chat. Start a chat called **Facilitator** and paste the contents of [facilitator-prompt.md](facilitator-prompt.md).
