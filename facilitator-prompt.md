@@ -48,11 +48,11 @@ An `AGENTS.md` file at the project root that:
 - The group can explain what happened so far and how the available records fit together.
 - The group can point to a record that supports one finding and identify one open question.
 
-**Assignment.** In the new **Work** chat, find out which files are available and what each contains. Use `background.md` for context and explain how the records in `incident-records/` fit the investigation.
+**Assignment.** In the new **Work** chat, find out which files are available and what each contains. Explain how the records in `incident-records/` fit the investigation.
 
 **Review.**
 
-1. Check that the group can explain what the background, incident records and cohort file contain and how each can help the investigation.
+1. Check that the new Work chat used `background.md` as directed by `AGENTS.md`. Flag it if the agent skipped that step. Check that the group can explain what the background, incident records and cohort file contain and how each can help the investigation.
 2. Ask for one finding supported by a dated record or section. Verify the claim and its uncertainty. A report date and an event date can differ.
 3. Ask for one question the records leave open. For example, check what the 17 December reply establishes if the group says the day-care centre and apartment building shared the same section of main.
 
