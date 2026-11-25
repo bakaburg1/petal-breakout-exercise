@@ -9,12 +9,10 @@
       "extensions": [
         "GitHub.copilot",
         "GitHub.copilot-chat"
-      ]
-    },
-    "codespaces": {
-      "openFiles": [
-        "README.md"
-      ]
+      ],
+      "settings": {
+        "workbench.startupEditor": "readme"
+      }
     }
   }
 }
