@@ -20,9 +20,13 @@ Choose one reporter per group. The reporter shares their screen and works throug
 
 ## Chats
 
-- **Facilitator** introduces tasks, gives hints and reviews your work.
+You’ll use three separate chats in the same project or Codespace. Each chat has a different role.
+
+- **Facilitator** introduces each task, gives hints and reviews your work.
 - **Setup** is for preparing the project.
 - **Work** is for investigating the case, analysing data and writing the briefing.
+
+To ask **Facilitator** for a review, name the task you finished. If it asks for evidence, share the file path, a short excerpt or the check you ran. If you get stuck, tell it what you tried and where you stopped, then ask for a hint. Make any requested revisions in **Setup** or **Work** and return to **Facilitator** for another review.
 
 ## Tasks
 
@@ -30,7 +34,11 @@ Choose one reporter per group. The reporter shares their screen and works throug
 
 ### 1. Create project instructions
 
-In the same project, start a **Facilitator** chat and paste the [facilitator prompt](facilitator-prompt.md). Open a separate **Setup** chat and write your own prompt asking the agent to create `AGENTS.md`. Refer to [`background.md`](background.md) in your prompt so the agent uses it for context and includes a reference to it in `AGENTS.md`. Review the file it creates and ask **Facilitator** to check it before you move on. Ask for a hint if you get stuck.
+In your project, start a **Facilitator** chat and paste the [facilitator prompt](facilitator-prompt.md).
+
+Open a separate **Setup** chat and write your own prompt asking the agent to create `AGENTS.md`. Refer to [`background.md`](background.md) in your prompt so the agent uses it for context and includes a reference to it in `AGENTS.md`.
+
+Review the file it creates and ask **Facilitator** to check it before you move on.
 
 #### Expected outcome
 
@@ -52,7 +60,9 @@ An `AGENTS.md` file at the project root that:
 
 ### 2. Review the case
 
-Once **Facilitator** approves `AGENTS.md`, start a new **Work** chat in the same project. Use it for Tasks 2–4 and ask **Facilitator** to review each task. In **Work**, ask what files are available and ask the agent to explain how the files in [`incident-records/`](incident-records/) fit the investigation.
+Once **Facilitator** approves `AGENTS.md`, start a new **Work** chat in the same project. Use it for Tasks 2–4 and ask **Facilitator** to review each task.
+
+In **Work**, ask what files are available and ask the agent to explain how the files in [`incident-records/`](incident-records/) fit the investigation.
 
 #### Expected outcomes
 
@@ -70,7 +80,9 @@ Once **Facilitator** approves `AGENTS.md`, start a new **Work** chat in the same
 
 ### 3. Analyse the cohort
 
-Start by exploring [`cohort_line_list.csv`](cohort_line_list.csv) in the **Work** chat. Find out what a row represents, what the columns describe and how missing values are recorded. Then compare the risk of illness among respondents who drank tap water with those who did not.
+Start by exploring [`cohort_line_list.csv`](cohort_line_list.csv) in the **Work** chat. Find out what a row represents, what the columns describe and how missing values are recorded.
+
+Then compare the risk of illness among respondents who drank tap water with those who did not.
 
 #### Expected outcomes
 
@@ -84,13 +96,15 @@ Start by exploring [`cohort_line_list.csv`](cohort_line_list.csv) in the **Work*
 
 - Tell the agent which analyses and plots you want it to produce.
 - Give the agent the path and filename for the final R code.
-- Specify bars or lines, the time interval on the horizontal axis, the risk factor to use and how to distinguish cases by risk group, for example with colours or separate panels. Review the plot and tell the agent what to adjust.
+- Tell the agent how to plot the epidemic curve. Specify bars or lines, the time interval on the horizontal axis, the risk factor to use and how to distinguish cases by risk group, for example with colours or separate panels. Review the plot and tell the agent what to adjust.
 
 </details>
 
 ### 4. Write the briefing
 
-Use the incident records and your reviewed results to prepare a half-page update for the Kalundborg municipal incident team.
+In **Work**, use the incident records and your reviewed results to prepare a half-page update for the Kalundborg municipal incident team.
+
+Check the briefing against the records and the analysis, then ask **Facilitator** to review it.
 
 #### Expected outcomes
 
