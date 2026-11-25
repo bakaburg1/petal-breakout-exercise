@@ -1,15 +1,31 @@
-# PETAL breakout exercise in Codespaces
+# PETAL breakout exercise
 
 Prepare a short update for the Kalundborg municipal incident team. You have 40 minutes.
 
-[Open in GitHub Codespaces](https://codespaces.new/bakaburg1/petal-breakout-exercise)
-
 ## Start here
 
-Choose one reporter per group. The reporter opens the Codespace in the browser, shares their screen and directs Copilot with the group. If VS Code opens in Restricted Mode, select **Trust Folder & Continue** for this exercise workspace. R is included. Open the terminal and run `Rscript --version` to check it. If Copilot asks you to sign in or activate access, use your own GitHub account.
+Choose one reporter per group. The reporter shares their screen and works through the exercise with the group. Choose one of these two ways to open the project.
 
-1. Open Copilot Chat. Start a chat called **Facilitator** and paste the contents of [facilitator-prompt.md](facilitator-prompt.md).
-2. Start a second chat called **Work** in the same workspace and paste this prompt:
+### Work locally with the desktop app (preferred)
+
+1. [Download the exercise files as a ZIP](https://github.com/bakaburg1/petal-breakout-exercise/archive/refs/heads/main.zip) and extract the folder.
+2. Open the extracted folder as a local project in Codex. In the ChatGPT desktop app, select **Codex** from the product menu, then **Work in → This computer**. Use the same folder for both chats. [Codex local environments](https://learn.chatgpt.com/docs/environments/modes)
+3. Install [R](https://cran.r-project.org/) if needed. Open a terminal in the exercise folder and run `Rscript --version` to check it.
+
+If you use **ChatGPT Work** in the desktop app, choose **Local** if available and give both chats access to the same exercise folder. You can run the R script yourself in your computer’s terminal and show the output to the facilitator. [ChatGPT Work local mode](https://learn.chatgpt.com/docs/get-started-with-work)
+
+Use an internet connection for the assistant. Your exercise files and R session are on your computer.
+
+### Work online with GitHub Codespaces
+
+1. [Open the exercise in GitHub Codespaces](https://codespaces.new/bakaburg1/petal-breakout-exercise), sign in with your GitHub account and select **Create codespace**.
+2. If prompted, select **Trust Folder & Continue** for this exercise workspace. The rendered guide opens in the browser editor.
+3. Open **Copilot Chat**. Sign in or activate Copilot if prompted. R is included. Run `Rscript --version` in the Codespaces terminal to check it.
+
+## Set up your two chats
+
+1. Start a chat called **Facilitator** in your local project or Codespace. Paste the contents of [facilitator-prompt.md](facilitator-prompt.md) as its first message.
+2. Start a second chat called **Work** in the same project or Codespace. Paste this prompt, then review the file it creates.
 
    > Create a short AGENTS.md in the project root for our simulated Kalundborg outbreak investigation. Use background.md for context. Include instructions to preserve source files, cite evidence, record assumptions and make the analysis reproducible. Show me the file for review. Once I approve it, follow it in this chat for the rest of the exercise.
 
