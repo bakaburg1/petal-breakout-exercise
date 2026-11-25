@@ -6,7 +6,7 @@ Prepare a short update for the Kalundborg municipal incident team. You have 40 m
 
 Choose one reporter per group. The reporter shares their screen and works through the exercise with the group.
 
-### Work locally with the desktop app (preferred)
+### Work locally with the ChatGPT desktop app (preferred)
 
 1. [Download the exercise files as a ZIP](https://github.com/bakaburg1/petal-breakout-exercise/archive/refs/heads/main.zip) and extract the folder.
 2. [Download ChatGPT for desktop](https://chatgpt.com/download/) if needed. In the app, select **Codex**, open the extracted folder and choose **This computer**.
