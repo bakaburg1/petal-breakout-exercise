@@ -21,8 +21,8 @@ Choose one reporter per group. The reporter shares their screen and works throug
 ## Chats
 
 1. In your project, start a chat called **Facilitator** and paste the [facilitator prompt](facilitator-prompt.md). The facilitator introduces the tasks, gives hints if you get stuck and reviews your work before you move on.
-2. Start a chat called **Work** in the same project.
-3. After each task, tell **Facilitator** which task you finished and ask for a review. Ask for a hint whenever the group gets stuck. Do any subsequent work in the **Work** chat.
+2. Start a separate **Setup** chat for Task 1. Ask **Facilitator** for help or a review of `AGENTS.md`.
+3. After **Facilitator** approves `AGENTS.md`, start a new **Work** chat in the same project. Use this chat for Tasks 2–4 and ask **Facilitator** to review each task before moving on.
 
 ## Tasks
 
@@ -30,14 +30,15 @@ Choose one reporter per group. The reporter shares their screen and works throug
 
 ### 1. Create project instructions
 
-Read [`background.md`](background.md), then write your own prompt in the **Work** chat asking the agent to create `AGENTS.md`. Review the file it creates.
+In the **Setup** chat, write your own prompt asking the agent to create `AGENTS.md`. Refer to [`background.md`](background.md) in your prompt so the agent uses it for context and includes a reference to it in `AGENTS.md`. Review the file it creates.
 
 #### Expected outcome
 
 An `AGENTS.md` file at the project root that:
 
 - Explains that the team is investigating an ongoing outbreak of gastrointestinal illness in Kalundborg and describes the team's current objectives.
-- Tells the agent to read `background.md` at the start of every new chat and identifies [`incident-records/`](incident-records/) as the source records.
+- Tells the agent to read `background.md` at the start of every new chat.
+- Describes the relevant contents of the repository, including the source records in [`incident-records/`](incident-records/) and the cohort data in [`cohort_line_list.csv`](cohort_line_list.csv).
 - Tells the agent to preserve original inputs, cite evidence, record assumptions and make analyses reproducible.
 
 <details>
@@ -45,12 +46,13 @@ An `AGENTS.md` file at the project root that:
 
 - Identify what the agent needs to know about the investigation whenever a new chat starts.
 - Decide which standing instructions belong in `AGENTS.md` and which case details can stay in `background.md`.
+- Keep exercise logistics and references to `README.md` and `facilitator-prompt.md` out of `AGENTS.md`.
 
 </details>
 
 ### 2. Review the case
 
-In the **Work** chat, ask what files are available. Use [`background.md`](background.md) for context and ask the agent to explain how the files in [`incident-records/`](incident-records/) fit the investigation.
+In your new **Work** chat, ask what files are available. Use [`background.md`](background.md) for context and ask the agent to explain how the files in [`incident-records/`](incident-records/) fit the investigation.
 
 #### Expected outcomes
 
@@ -73,17 +75,16 @@ Start by exploring [`cohort_line_list.csv`](cohort_line_list.csv) in the **Work*
 #### Expected outcomes
 
 - The analysis results, including cases, non-cases, denominators and attack rates by exposure, the risk ratio and the missing-exposure count.
-- An R file containing the analyses the group ran.
 - An epidemic curve made with ggplot2, stratified by relevant risk factors such as tap-water consumption.
+- An R file with the code that runs the analyses and creates the epidemic curve.
 - A manual review of the generated R code. Check how it selects cases, handles missing exposures and calculates at least one result.
 
 <details>
 <summary>Practical hints for task 3</summary>
 
-- Find out which columns identify respondents, classify cases and describe tap-water consumption. Check how the agent handles unknown exposure.
-- Check who contributes to each denominator and which group is the reference for the risk ratio.
-- Check which field records symptom onset and how much detail it supports. Consider how to show cases with unknown exposure without assigning them to a known group.
-- Recalculate one rate from its counts or reconcile the group totals and missing exposures with the number of rows.
+- Tell the agent which outputs you want to see and which R file should hold the analysis and plotting code.
+- Specify how you want the epidemic curve drawn, such as bars or lines and the time interval on the horizontal axis.
+- Tell the agent which risk factor to use and how to distinguish groups, for example with colours or separate panels. Ask to see the plot and tell the agent what to adjust.
 
 </details>
 
@@ -93,7 +94,7 @@ Use the incident records and your reviewed results to prepare a half-page update
 
 #### Expected outcomes
 
-- A Word document named `briefing.docx` that includes the analysis results and the epidemic curve. State the main finding and who was compared, identify one uncertainty and propose one next action.
+- A Word document named `briefing.docx` that includes a summary of the analysis results and the epidemic curve. State the main finding and who was compared, identify one uncertainty and propose one next action.
 - The wording describes the association and links factual claims to their sources.
 - The group can show one factual claim checked against the records and one figure checked against the results.
 
