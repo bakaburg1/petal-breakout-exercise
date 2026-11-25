@@ -4,101 +4,84 @@ Prepare a short update for the Kalundborg municipal incident team. You have 40 m
 
 ## Start here
 
-Choose one reporter per group. The reporter shares their screen and works through the exercise with the group. Choose one of these two ways to open the project.
+Choose one reporter per group. The reporter shares their screen and works through the exercise with the group.
 
 ### Work locally with the desktop app (preferred)
 
 1. [Download the exercise files as a ZIP](https://github.com/bakaburg1/petal-breakout-exercise/archive/refs/heads/main.zip) and extract the folder.
-2. Open the extracted folder as a local project in Codex. In the ChatGPT desktop app, select **Codex** from the product menu, then **Work in → This computer**. Use the same folder for both chats. [Codex local environments](https://learn.chatgpt.com/docs/environments/modes)
-3. Install [R](https://cran.r-project.org/) if needed. Open a terminal in the exercise folder and run `Rscript --version` to check it.
-
-If you use **ChatGPT Work** in the desktop app, choose **Local** if available and give both chats access to the same exercise folder. You can run the R script yourself in your computer’s terminal and show the output to the facilitator. [ChatGPT Work local mode](https://learn.chatgpt.com/docs/get-started-with-work)
-
-Use an internet connection for the assistant. Your exercise files and R session are on your computer.
+2. [Download ChatGPT for desktop](https://chatgpt.com/download/) if needed. In the app, select **Codex**, open the extracted folder and choose **This computer**.
+3. Make sure R is installed on your computer.
 
 ### Work online with GitHub Codespaces
 
-1. [Open the exercise in GitHub Codespaces](https://codespaces.new/bakaburg1/petal-breakout-exercise), sign in with your GitHub account and select **Create codespace**.
-2. If prompted, select **Trust Folder & Continue** for this exercise workspace. The rendered guide opens in the browser editor.
-3. Open **Copilot Chat**. Sign in or activate Copilot if prompted. R is included. Run `Rscript --version` in the Codespaces terminal to check it.
+1. [Open the exercise in GitHub Codespaces](https://codespaces.new/bakaburg1/petal-breakout-exercise), sign in to GitHub and select **Create codespace**.
+2. If prompted, select **Trust Folder & Continue**. The guide opens in the browser editor.
+3. Open **Copilot Chat** and sign in if prompted. R and ggplot2 are included.
 
-## Set up your two chats
+## Chats
 
-1. Start a chat called **Facilitator** in your local project or Codespace. Paste the contents of [facilitator-prompt.md](facilitator-prompt.md) as its first message.
-2. Start a second chat called **Work** in the same project or Codespace. Paste this prompt, then review the file it creates.
+1. In your project, start a chat called **Facilitator** and paste the [facilitator prompt](facilitator-prompt.md). The facilitator introduces the tasks, gives hints if you get stuck and reviews your work before you move on.
+2. Start a chat called **Work** in the same project. Use it to investigate the case, analyse the data and prepare the briefing. Paste the prompt below, then review the file it creates.
 
    > Create a short AGENTS.md in the project root for our simulated Kalundborg outbreak investigation. Use background.md for context. Include instructions to preserve source files, cite evidence, record assumptions and make the analysis reproducible. Show me the file for review. Once I approve it, follow it in this chat for the rest of the exercise.
 
-3. Keep all investigation work in **Work**. After each task, switch to **Facilitator**, name the task and ask for a review. For example, “I’ve finished ‘Review the evidence’. Please review it.” Make any required corrections in **Work** and request another review.
+3. After each task, tell **Facilitator** which task you finished and ask for a review. Ask for a hint whenever the group gets stuck. Make any corrections in **Work**.
 
 ## Tasks
 
-Save the files in your project folder. For each review, tell **Facilitator** the task name and share the saved file names. Paste a check or excerpt if the facilitator asks for it.
+### 1. Review the case
 
-### 1. Review the evidence
-
-Use **Work** to ask questions about the investigation in [`background.md`](background.md). Save a short evidence note.
-
-#### Expected outcomes
-
-- `evidence-note.md` contains one finding and a reference to the section or record that supports it.
-- The note identifies one question that still matters for the investigation.
+Ask **Work** what files are available and what each one contains. Have it explain the case using the incident records in [`background.md`](background.md). Be ready to explain what happened, point to a record that supports one finding and name an open question.
 
 <details>
 <summary>Practical hints for task 1</summary>
 
-1. Pick one event or decision, such as the change in water advice. Ask **Work** “What did the team know when it made this decision? Give me the event date and the background section.”
-2. Open the cited section yourself. Check whether it confirms the claim and whether the event date differs from the date it was reported.
-3. Write your note under two short headings, **Finding** and **Open question**. Say why answering the question could change what the team does next.
+- Ask for an overview of the investigation and which records support it.
+- Pick one event or decision, such as a change in the water advice. Find the record and check the event date against the report date.
+- Identify one point the records leave unresolved and why it matters.
 
 </details>
 
 ### 2. Analyse the cohort
 
-Use base R and [`cohort_line_list.csv`](cohort_line_list.csv) to compare the risk of illness among respondents who drank tap water with those who did not.
+Start by exploring [`cohort_line_list.csv`](cohort_line_list.csv) with **Work**. Find out what a row represents, what the columns describe and how missing values are recorded. Then compare the risk of illness among respondents who drank tap water with those who did not.
 
 #### Expected outcomes
 
-- `analysis.R` runs from the project folder with the supplied CSV and base R.
-- `results.csv` shows cases, non-cases, denominators and attack rates for both known exposure groups. It reports the risk ratio for drinkers compared with non-drinkers and the number of respondents with missing exposure.
-- The group can show one numerical check it performed.
+- A reproducible R analysis that the agent has run on the supplied data. Choose the functions and packages that suit your analysis.
+- A Markdown file with cases, non-cases, denominators and attack rates for both known exposure groups, the risk ratio and the number of respondents with missing exposure. Present the results in the layout you prefer.
+- A plot made with **ggplot2** that helps explain a result. Include it in the Markdown file.
+- One numerical check you can explain to the group.
 
 <details>
 <summary>Practical hints for task 2</summary>
 
-1. Ask **Work** “Read the supplied CSV. Check the respondent IDs and exposure values before writing the analysis. Show me how you will handle blanks.” Use the [field definitions](#data-fields) below.
-2. Build the counts for the two known exposure groups first. For each group, divide cases by cases plus non-cases. Divide the drinkers’ rate by the non-drinkers’ rate for the risk ratio. Count blank exposure separately.
-3. Ask **Work** to run `Rscript analysis.R` from the project folder and show the run result. If the file cannot be found, check the working folder and the CSV name.
-4. Try a manual check. Recalculate one rate from the table or add both group totals and the missing-exposure count and compare the sum with the CSV row count. Record what you checked in **Work**.
+- Find out which columns identify respondents, classify cases and describe tap-water consumption. Check how the agent handles unknown exposure.
+- Check who contributes to each denominator and which group is the reference for the risk ratio.
+- Choose a comparison the plot can clarify. Check the labels and whether the plotted values agree with the results.
+- Recalculate one rate from its counts or reconcile the group totals and missing exposures with the number of rows.
 
 </details>
 
 ### 3. Write the briefing
 
-Use your evidence note and reviewed results to prepare a half-page update for the municipal incident team.
+Use the incident records and your reviewed results to prepare a half-page update for the Kalundborg municipal incident team.
 
 #### Expected outcomes
 
-- `briefing.md` states the main result and who was compared, identifies one uncertainty and proposes one next action.
+- A Word document named `briefing.docx` that states the main finding and who was compared, identifies one uncertainty and proposes one next action.
 - The wording describes the association and links factual claims to their sources.
-- The group can show one factual claim checked against the background and one figure checked against the results table.
+- The group can show one factual claim checked against the records and one figure checked against the results.
 
 <details>
 <summary>Practical hints for task 3</summary>
 
-1. Ask **Work** to draft under three short headings, **Finding**, **Uncertainty** and **Next action**. Point it to your reviewed output files.
-2. Read the result sentence beside the results table. Check the number, which group had the higher risk and which group is the reference.
-3. Trace one sentence about the investigation to its cited section. Choose a next action that would address the uncertainty you named, and describe it as a proposal.
+- Plan the briefing around the finding, the uncertainty and the next action.
+- Read the result sentence beside the Markdown results. Check the number, the direction of the comparison and the reference group.
+- Trace one factual claim to a dated record or section of the background. Choose a next action that would address the uncertainty you named.
 
 </details>
-
-## Data fields
-
-- `respondent_id` identifies one synthetic survey respondent.
-- `case_status` is `1` for a case and `0` for a non-case.
-- `tap_water` is `drank`, `did_not_drink` or blank if exposure is unknown.
 
 ## Report back
 
 The reporter shows what the group produced and explains how the exercise went.
-
