@@ -1,8 +1,8 @@
 # Kalundborg outbreak investigation
 
-This is the case file for the PETAL breakout. It adapts the 2012 Kalundborg investigation to December 2025, the year used in the live demonstration and the synthetic survey data. The incident records below are teaching reconstructions or summaries of the case study. The municipality leads the investigation. Statens Serum Institut (SSI) joins in support on 17 December.
+The local epidemiology team is investigating an outbreak of gastrointestinal illness in Kalundborg, Denmark. The municipality leads the response, with support from Statens Serum Institut (SSI) from 17 December 2025. The team aims to establish what happened and when, assess whether tap water was a source of illness and brief the municipal incident team.
 
-The file ends when the team is ready to analyse the survey. Refer to the section IDs (for example, **B3**) when you cite evidence.
+The [incident records](incident-records/) contain the initial community reports, clinical alert, municipal briefing and water utility reply. This background summarises the investigation through the start of the survey analysis. Use the dated records for evidence and the section IDs below for context.
 
 ## B1. 13 December | First reports
 
@@ -18,7 +18,7 @@ Sources: Public health duty log **PH-1213-01** and water utility service ticket 
 - On 15 December, the municipality receives a preliminary report of elevated *E. coli* and coliform counts in water samples from APT-01. A boil-water notice goes out. Day-care facilities and restaurants in the affected area close as a precaution.
 - On 16 December, the municipality advises residents in the affected area to stop using tap water and arranges an alternative supply.
 
-Sources: Clinical alert, 15 December at 12:20. Municipal incident briefing, 17 December at 08:40. Kalundborg teaching case, Part 2.
+Sources: Clinical alert, 15 December at 12:20. Municipal incident briefing, 17 December at 08:40.
 
 ## B3. 17 December | Utility records and coordination
 
@@ -26,7 +26,7 @@ The utility reports several pressure drops during pipe replacement on the night 
 
 The municipality continues to coordinate the response and brings in SSI to support the investigation.
 
-Sources: Utility operations reply, 17 December at 09:15. Kalundborg teaching case, Part 1.
+Sources: Utility operations reply, 17 December at 09:15.
 
 ## B4. 17–19 December | Environmental investigation
 
@@ -34,13 +34,11 @@ The water laboratory reports results by sampling point and collection date. For 
 
 On 19 December, investigators receive the inspection findings. The utility found a leaking sewer above the affected water main near the pipe works. Repairs followed that day. The location and timing support the working hypothesis that contaminated tap water contributed to the illness cluster.
 
-Sources: Laboratory records **WQ-KAL-251217-B**, **WQ-KAL-251217-D** and **WQ-KAL-251217-F**. Kalundborg teaching case, Part 2.
+Sources: Laboratory records **WQ-KAL-251217-B**, **WQ-KAL-251217-D** and **WQ-KAL-251217-F**.
 
 ## B5. 20 December | Clinical laboratory findings
 
 SSI reports norovirus genogroup II in **16 of 17** specimens from symptomatic residents. The findings support norovirus as the likely cause of illness. The specimens came from symptomatic people. Whether drinking tap water increased the risk of illness remains a separate question for the survey analysis.
-
-Source: Kalundborg teaching case, Parts 2–3.
 
 ## B6. 20 December onward | Case finding and household survey
 
@@ -48,12 +46,9 @@ The team defines a case as a resident of the affected area who developed diarrho
 
 Investigators distribute questionnaires door to door to **368 households** in the affected area. The survey asks about symptoms and onset, residence, respondent characteristics, tap-water consumption and travel. The team needs responses from people who became ill and people who stayed well to compare risks.
 
-Source: Kalundborg teaching case, Parts 3–4.
-
 ## B7. At the start of the analysis
 
-The municipal team has the complete teaching survey extract. Drinking tap water is the exposure under study. The affected supply area defines the population from which the survey respondents came. Each row of `cohort_line_list.csv` represents a synthetic respondent. The `case_status` field gives the case classification and `tap_water` records reported consumption where known.
+The municipal team has the household survey extract. Drinking tap water is the exposure under study. The affected supply area defines the population from which the survey respondents came. Each row of `cohort_line_list.csv` represents one respondent. The `case_status` field gives the case classification and `tap_water` records reported consumption where known.
 
 The team wants to assess the association between reported tap-water consumption and illness. The survey and the incident records answer different questions. Later onsets could also reflect secondary transmission or other exposures, which the group should consider when interpreting the comparison.
 
-Sources: Kalundborg teaching case, Parts 4–6, for survey and design context. PETAL cohort data dictionary for the synthetic extract.
