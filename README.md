@@ -26,6 +26,8 @@ Choose one reporter per group. The reporter shares their screen and works throug
 
 ## Tasks
 
+<!-- When changing a task title or expected outcome, update the matching section of facilitator-prompt.md in the same edit. -->
+
 ### 1. Create project instructions
 
 Read [`background.md`](background.md), then write your own prompt in the **Work** chat asking the agent to create `AGENTS.md`. Review the file it creates.
