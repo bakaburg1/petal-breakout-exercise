@@ -1,0 +1,16 @@
+WATER UTILITY | CUSTOMER SERVICE TICKET
+Ticket ID: WU-1213-04
+Opened: 13 December 2025, 10:25 CET
+Channel: Telephone
+Caller: Resident
+Received by: Customer service
+Site: APT-01, Kalundborg
+Exported for the local incident team: 17 December 2025, 08:15 CET
+
+Contact notes
+A resident reports stomach illness among people in the apartment building.
+The resident did not give a count or say when people first became ill.
+
+Ticket action
+Refer to network operations and retain the report for follow-up with local
+public health.
