@@ -9,12 +9,7 @@
       "extensions": [
         "GitHub.copilot",
         "GitHub.copilot-chat"
-      ],
-      "settings": {
-        "workbench.editorAssociations": {
-          "README.md": "vscode.markdown.preview.editor"
-        }
-      }
+      ]
     },
     "codespaces": {
       "openFiles": [
