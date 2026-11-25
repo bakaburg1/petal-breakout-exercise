@@ -6,10 +6,10 @@ Prepare a short update for the Kalundborg municipal incident team. You have 40 m
 
 Choose one reporter per group. The reporter shares their screen and works through the exercise with the group.
 
-### Work locally with the ChatGPT desktop app (preferred)
+### Work locally with the ChatGPT desktop app / Codex (preferred)
 
 1. [Download the exercise files as a ZIP](https://github.com/bakaburg1/petal-breakout-exercise/archive/refs/heads/main.zip) and extract the folder.
-2. [Download ChatGPT for desktop](https://chatgpt.com/download/) if needed. In the app, select **Codex**, create a project, add the extracted folder as its source folder and choose **This computer**.
+2. [Download ChatGPT for desktop](https://chatgpt.com/download/) and sign in with your ChatGPT account. In the app, select **Codex**, create a project, add the extracted folder as its source folder and choose **This computer**.
 3. If R is missing, ask Codex to install it.
 
 ### Work online with GitHub Codespaces
@@ -20,9 +20,9 @@ Choose one reporter per group. The reporter shares their screen and works throug
 
 ## Chats
 
-1. In your project, start a chat called **Facilitator** and paste the [facilitator prompt](facilitator-prompt.md). The facilitator introduces the tasks, gives hints if you get stuck and reviews your work before you move on.
-2. Start a separate **Setup** chat for Task 1. Ask **Facilitator** for help or a review of `AGENTS.md`.
-3. After **Facilitator** approves `AGENTS.md`, start a new **Work** chat in the same project. Use this chat for Tasks 2–4 and ask **Facilitator** to review each task before moving on.
+- **Facilitator** introduces tasks, gives hints and reviews your work.
+- **Setup** is for preparing the project.
+- **Work** is for investigating the case, analysing data and writing the briefing.
 
 ## Tasks
 
@@ -30,7 +30,7 @@ Choose one reporter per group. The reporter shares their screen and works throug
 
 ### 1. Create project instructions
 
-In the **Setup** chat, write your own prompt asking the agent to create `AGENTS.md`. Refer to [`background.md`](background.md) in your prompt so the agent uses it for context and includes a reference to it in `AGENTS.md`. Review the file it creates.
+In the same project, start a **Facilitator** chat and paste the [facilitator prompt](facilitator-prompt.md). Open a separate **Setup** chat and write your own prompt asking the agent to create `AGENTS.md`. Refer to [`background.md`](background.md) in your prompt so the agent uses it for context and includes a reference to it in `AGENTS.md`. Review the file it creates and ask **Facilitator** to check it before you move on. Ask for a hint if you get stuck.
 
 #### Expected outcome
 
@@ -52,7 +52,7 @@ An `AGENTS.md` file at the project root that:
 
 ### 2. Review the case
 
-In your new **Work** chat, ask what files are available. Use [`background.md`](background.md) for context and ask the agent to explain how the files in [`incident-records/`](incident-records/) fit the investigation.
+Once **Facilitator** approves `AGENTS.md`, start a new **Work** chat in the same project. Use it for Tasks 2–4 and ask **Facilitator** to review each task. In **Work**, ask what files are available and ask the agent to explain how the files in [`incident-records/`](incident-records/) fit the investigation.
 
 #### Expected outcomes
 
@@ -82,9 +82,9 @@ Start by exploring [`cohort_line_list.csv`](cohort_line_list.csv) in the **Work*
 <details>
 <summary>Practical hints for task 3</summary>
 
-- Tell the agent which outputs you want to see and which R file should hold the analysis and plotting code.
-- Specify how you want the epidemic curve drawn, such as bars or lines and the time interval on the horizontal axis.
-- Tell the agent which risk factor to use and how to distinguish groups, for example with colours or separate panels. Ask to see the plot and tell the agent what to adjust.
+- Tell the agent which analyses and plots you want it to produce.
+- Give the agent the path and filename for the final R code.
+- Specify bars or lines, the time interval on the horizontal axis, the risk factor to use and how to distinguish cases by risk group, for example with colours or separate panels. Review the plot and tell the agent what to adjust.
 
 </details>
 
