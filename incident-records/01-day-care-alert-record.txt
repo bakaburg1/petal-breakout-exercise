@@ -1,0 +1,16 @@
+LOCAL PUBLIC HEALTH | DUTY LOG
+Record ID: PH-1213-01
+Received: 13 December 2025, 09:10 CET
+Channel: Telephone
+Caller: Day-care centre manager
+Received by: Public health duty officer
+Site: DC-01, Kalundborg
+
+Call note
+The manager reports that several children have gastrointestinal symptoms.
+The caller could not give a count or dates of symptom onset at the time
+of the call.
+
+Follow-up
+Call the centre back for the number of children affected, dates of symptom
+onset and the total number of children attending.
