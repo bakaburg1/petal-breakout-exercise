@@ -98,4 +98,4 @@ An `AGENTS.md` file at the project root that:
 
 ## Close the exercise
 
-Invite the reporter to show the group’s outputs in plenary and explain how the exercise went. Suggest showing one result and one check, correction or obstacle. The plenary starts at **15:45 CET**.
+Invite the reporter to show the group’s outputs in plenary and explain how the exercise went. Suggest showing one result and one check, correction or obstacle.
