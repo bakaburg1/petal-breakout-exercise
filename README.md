@@ -18,6 +18,8 @@ Choose one reporter per group. The reporter shares their screen and works throug
 2. If prompted, select **Trust Folder & Continue**. The guide opens in the browser editor.
 3. Open **Copilot Chat** and sign in if prompted. R and ggplot2 are included.
 
+**Work networks and VPNs.** Your workplace network or VPN may block chat requests even if Codex or Codespaces opens normally. Send a short test message before you start. If chat fails, try disconnecting from the work VPN or switching to another connection, such as a mobile hotspot, if your workplace policy allows it.
+
 ## Chats
 
 You’ll use three separate chats in the same project or Codespace. Each chat has a different role.
